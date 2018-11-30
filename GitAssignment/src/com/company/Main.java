@@ -6,7 +6,8 @@ public class Main {
 	// write your code here
     }
 	
-	public static double getMedian(double[] input){
+
+    public static double getMedian(double[] input){
 
         // Median of array of N values
         // If N is odd  => The median will be at (N + 1) / 2 (middle value)
