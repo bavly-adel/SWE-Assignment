@@ -53,4 +53,12 @@ public static void get_most_reapeated(int[]arr)
 	      int[] values={3,4,3,7,2,1,1,1,4};
 	      get_most_reapeated(values);
     }
+public void sort(int array[],int size)
+		{ArrayList<Integer> data = new ArrayList<Integer>();          
+		for(int i=0;i<size;i++)
+		{data.add(array[i]);}
+
+			data.sort(null);
+			System.out.println(data);
+		}
 }
