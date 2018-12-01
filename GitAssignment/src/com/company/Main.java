@@ -67,9 +67,6 @@ public static void get_most_reapeated(int[]arr)
             }
         }
         return true;
-
-	      int[] values={3,4,3,7,2,1,1,1,4};
-	      get_most_reapeated(values);
- master
+	      
     }
 }
