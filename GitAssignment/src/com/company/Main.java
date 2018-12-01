@@ -1,5 +1,5 @@
 package com.company;
-
+import java.util.Random;
 public class Main {
     public static int[] Get_Min3(int []arr){
         int len=arr.length;
@@ -21,7 +21,35 @@ public class Main {
         int []min_3element= {Copy_Array[0],Copy_Array[1],Copy_Array[2]};
         return min_3element;
     }
+
+ public  static int[] shufflearray(int array[]){
+       Random rnd = new Random(); 
+       for(int i=0;i<array.length;i++){
+           int randomposition=rnd.nextInt(array.length);
+           //to swap the element 
+           int temp=array[i];
+           array[i]=array[randomposition];
+           array[randomposition]=temp;
+       }
+       return array;
+   
+   }
+
     public static void main(String[] args) {
 	// write your code here
+        int []arrayofelement={7,9,3,5,6};
+        System.out.print("the element before shuffle --->");
+        for (int i = 0; i < arrayofelement.length; i++)
+    {
+      System.out.print(arrayofelement[i] + " ");
+    }
+       System.out.println(); 
+        shufflearray(arrayofelement);
+        for (int i = 0; i < arrayofelement.length; i++)
+    {
+      System.out.print(arrayofelement[i] + " ");
+    }
+    System.out.println();
+  }
     }
 }
