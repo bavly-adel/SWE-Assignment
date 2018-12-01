@@ -3,7 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	public static void Distinct(int []arr) {
+	
+    }
+    public static void Distinct(int []arr) {
 		String temp="";
 		String collect="";
         boolean flag=false;
@@ -25,6 +27,5 @@ public class Main {
         System.out.print(add.get(i)+" ");
 
            
-    }
     }
 }
