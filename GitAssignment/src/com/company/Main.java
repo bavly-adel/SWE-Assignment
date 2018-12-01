@@ -1,5 +1,13 @@
 package com.company;
 public class Main {
+	public static void Reverse_arr(String arr[]){
+         String a[]=new String [arr.length];
+        for(int i=0;i<arr.length ;i++)
+        { 
+            a[i]=arr[arr.length-i-1];
+            System.out.println(a[i]);   
+          } 
+    } 
 public static void get_most_reapeated(int[]arr)
 	    {
 	        int most = 0;
