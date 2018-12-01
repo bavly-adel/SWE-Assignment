@@ -368,7 +368,27 @@ public class Main {
 
 
     }
+ sortt
+ sortt
+public void sort(int array[],int size)
+		{ArrayList<Integer> data = new ArrayList<Integer>();          
+		for(int i=0;i<size;i++)
+		{data.add(array[i]);}
+
+			data.sort(null);
+			System.out.println(data);
+		}
+}
+
+	
+
+
+}
+
+
+    }
 
 
 
 }
+ master
