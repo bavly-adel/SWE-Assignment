@@ -21,7 +21,17 @@ public class Main {
         int []min_3element= {Copy_Array[0],Copy_Array[1],Copy_Array[2]};
         return min_3element;
     }
+    public static void get_avg(int []arr){
+        int x=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            x+=arr[i];
+        }
+        x/=arr.length;
+        System.out.println("the average is "+x);
+    }
     public static void main(String[] args) {
-	// write your code here
+        int []arr={1,2,3,4,5};
+        get_avg(arr);
     }
 }
