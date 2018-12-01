@@ -54,29 +54,53 @@ public static void get_most_reapeated(int[]arr)
         return min_3element;
     }
 
-        public static void getSmallest(int []arr)
+          public static void getSmallest(int []arr)
     {
-                System.out.println("Get Smallest");
-        
-        int sz = arr.length;
 
-        int t=arr[0];
-        for(int i=0; i<sz; i++)
+        int sz=arr.length;
+  
+        int [] arr1;
+            arr1 = new int[sz];
+
+        
+        
+        int i=0,z=0;
+        while(i<sz)
+        {
+            int c=0;
+            for(int j=2; j<=9; j++)
+            {
+                if(arr[i]%j==0 && arr[i]!=j)
+                {
+                    c++;
+                    break;
+                }
+
+            }
+            if(c==0)
+            {arr1[z]=arr[i];z++;} i++;
+        
+        }
+        
+                int t=arr1[0];
+        for(int ii=0; z>ii; ii++)
         {
 
-                if(arr[i]<t)
+                if(arr1[ii]<t)
                 {
-                    t=arr[i];
+                    t=arr1[ii];
 
                 }
             
         }
-        System.out.print("the smallest number is : "+ t );
-    }
+        System.out.print("the smallest prime is : "+ t );        
+}
     public static void main(String[] args) {
 
 	      int[] values={3,4,3,7,2,1,1,1,4};
 	      get_most_reapeated(values);
+	    getSmallest(values);
+	    
 
     }
     
