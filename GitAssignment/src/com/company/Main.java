@@ -61,6 +61,7 @@ public static void get_most_reapeated(int[]arr)
     public static void main(String[] args) {
 	      int[] values={3,4,3,7,2,1,1,1,4};
 	      get_most_reapeated(values);
+	      get_avg(values);
 
     }
 }
