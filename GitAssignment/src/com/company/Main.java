@@ -277,21 +277,21 @@ public class Main {
                 System.out.println("Select the function you want to execute: ");
                 System.out.println("1. Most repeated value");
                 System.out.println("2. Sort");
-                System.out.println("3. Shuffle");
-                System.out.println("4. Find largest prime");
+                //System.out.println("3. Shuffle");
+                //System.out.println("4. Find largest prime");
                 System.out.println("5. Find Smallest prime");
                 System.out.println("6. Check Palindrome");
                 System.out.println("7. Check sorted");
-                System.out.println("8. Count primes");
+                //System.out.println("8. Count primes");
                 System.out.println("9. Reverse array");
-                System.out.println("10.Shift array");
+                //System.out.println("10.Shift array");
                 System.out.println("11.Distinct Array");
                 System.out.println("12.Get maximum 3 numbers");
                 System.out.println("13.Get minimum 3 numbers");
                 System.out.println("14.Get average");
                 System.out.println("15.Get median");
-                System.out.println("16.Return only primes");
-                System.out.println("17.Zero if less than zero");
+                //System.out.println("16.Return only primes");
+                //System.out.println("17.Zero if less than zero");
                 System.out.println("18.Execute All");
                 int choice =input.nextInt();
 
@@ -392,6 +392,7 @@ public class Main {
                 }
 
                 else if (choice == 18) {
+                    getMedian(arr);
                     get_most_reapeated(arr);
                     int [] Res=Get_Min3(arr);
                     for(int i=0;i<Res.length;i++)
