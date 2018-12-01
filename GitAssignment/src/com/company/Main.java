@@ -1,9 +1,48 @@
 package com.company;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 
 public class Main {
+
+
+    /** Print-Largest Method**/
+    public static void Print_largest(int arr[], int arr_size)
+    {
+        int first, second, third;
+
+
+        if (arr_size < 3)
+        {
+            System.out.print(" Invalid Input, please try again  ");
+            return;
+        }
+
+        first = second =  third = Integer.MIN_VALUE;
+        for ( int i = 0; i < arr_size ; i ++)
+        {
+
+            if (arr[i] > first)
+            {   third = second;
+                second = first;
+                first = arr[i];
+            }
+
+            else if (arr[i] > second)
+            {
+                third = second;
+                second = arr[i];
+            }
+
+            else if (arr[i] > third)
+                third = arr[i];
+        }
+
+        System.out.println("Three largest elements are=> " + first + " " + second + " " + third);
+    }
+
+
+    /* Most Repeated Method*/
     public static void get_most_reapeated(int[]arr)
     {
         int most = 0;
@@ -32,13 +71,13 @@ public class Main {
     }
 
 
+    /** Min-3 Method **/
     public static int[] Get_Min3(int []arr){
         int len=arr.length;
         int []Copy_Array=new int[len];
         for(int i=0;i<len;i++) {
             Copy_Array[i]=arr[i];
         }
-
         len=len-1;
         for(int i=0;i<len;i++) {
             for(int j=0;j<len-i;j++) {
@@ -53,6 +92,7 @@ public class Main {
         return min_3element;
     }
 
+
     public static boolean checkSort(int[] array){
 
         for(int i=0;i<array.length-1;i++){
@@ -66,17 +106,25 @@ public class Main {
 
     }
 
+
+    public static void get_avg(int []arr){
+        int x=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            x+=arr[i];
+        }
+        x/=arr.length;
+        System.out.println("the average is "+x);
+    }
+
     public static void getSmallest(int []arr)
     {
 
         int sz=arr.length;
-
         int [] arr1;
         arr1 = new int[sz];
-
-
-
         int i=0,z=0;
+
         while(i<sz)
         {
             int c=0;
@@ -94,6 +142,7 @@ public class Main {
 
         }
 
+
         int t=arr1[0];
         for(int ii=0; z>ii; ii++)
         {
@@ -107,7 +156,37 @@ public class Main {
         }
         System.out.print("the smallest prime is : "+ t );
     }
-    public static void main(String[] args) {
+
+
+    public static int getMedian(int[] input){
+
+        // Median of array of N values
+        // If N is odd  => The median will be at (N + 1) / 2 (middle value)
+        // If N is even => The median will be the average of (N/2 , N/2 + 1)
+
+        int [] temp = Arrays.copyOf(input, input.length);
+        int len = temp.length;
+        boolean even = (len % 2) == 0;
+        int medianPosition = even ? (int) (len / 2.0) :  ((len + 1) / 2) - 1;
+
+        // SORT THE INPUT ARRAY BEFORE SELECTING THE MEDIAN
+        for (int i = 0 ; i < len-1 ; i++)
+            for (int j = i + 1; j < len  ; j++)
+                if (temp[i] > temp[j]){
+                    int x = temp[j];
+                    temp[j] = temp[i];
+                    temp[i] = x;
+                }
+
+        // RETURN THE MEDIAN
+        return even ? (temp[medianPosition] + temp[medianPosition + 1] / 2) : temp [medianPosition];
+    }
+
+
+
+    public static void main(String[] args)
+    {
+
 
         while (true) {
             Scanner input = new Scanner(System.in);
@@ -219,7 +298,8 @@ public class Main {
                     System.out.println("Invalid Choice");
                 }
 
-            } else if (choicee == 2) {
+            }
+            else if (choicee == 2) {
                 System.out.println("Please Enter Your String:");
                 String word = input.next();
                 String[] arr = word.split("");
@@ -260,8 +340,3 @@ public class Main {
 
 
 }
-
-
-    
-
-
