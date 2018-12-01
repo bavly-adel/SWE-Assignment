@@ -104,6 +104,11 @@ class CheckPalindrome<E> {
 		return true;
 	}
 package com.company;
+
+
+import java.util.Scanner;
+
+
 public class Main {
 public static void get_most_reapeated(int[]arr)
 	    {
@@ -167,7 +172,56 @@ public static void get_most_reapeated(int[]arr)
 	      
     }
 
+          public static void getSmallest(int []arr)
+    {
+
+        int sz=arr.length;
+  
+        int [] arr1;
+            arr1 = new int[sz];
+
+        
+        
+        int i=0,z=0;
+        while(i<sz)
+        {
+            int c=0;
+            for(int j=2; j<=arr[i]; j++)
+            {
+                if(arr[i]%j==0 && arr[i]!=j)
+                {
+                    c++;
+                    break;
+                }
+
+            }
+            if(c==0)
+            {arr1[z]=arr[i];z++;} i++;
+        
+        }
+        
+                int t=arr1[0];
+        for(int ii=0; z>ii; ii++)
+        {
+
+                if(arr1[ii]<t)
+                {
+                    t=arr1[ii];
+
+                }
+            
+        }
+        System.out.print("the smallest prime is : "+ t );        
+}
     public static void main(String[] args) {
+
+	      int[] values={3,4,3,7,2,1,1,1,4};
+	      get_most_reapeated(values);
+	    getSmallest(values);
+	    
+
+    }
+    
 	
 
 
@@ -175,5 +229,5 @@ public static void get_most_reapeated(int[]arr)
 
 
     
-master
+
 }
