@@ -68,7 +68,7 @@ public static void get_most_reapeated(int[]arr)
         while(i<sz)
         {
             int c=0;
-            for(int j=2; j<=9; j++)
+            for(int j=2; j<=arr[i]; j++)
             {
                 if(arr[i]%j==0 && arr[i]!=j)
                 {
