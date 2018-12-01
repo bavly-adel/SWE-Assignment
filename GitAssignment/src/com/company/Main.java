@@ -1,4 +1,7 @@
 package com.company;
+	import java.util.ArrayList;
+	import java.util.Arrays;
+	import java.util.Scanner;
 public class Main {
 public static void get_most_reapeated(int[]arr)
 	    {
@@ -53,4 +56,23 @@ public static void get_most_reapeated(int[]arr)
 	      int[] values={3,4,3,7,2,1,1,1,4};
 	      get_most_reapeated(values);
     }
+	public class sort {
+		public static void main(String[] args) {
+			ArrayList<Integer> data = new ArrayList<Integer>();
+			 Scanner input = new Scanner(System.in);
+             double []arr;
+			System.out.println("enter the size of the array");
+		
+			int size=input.nextInt();
+		arr=new double[size];
+
+	for(int i=0;i<size;i++)
+	{
+	int temp= input.nextInt();
+	data.add(temp);
+	}
+	data.sort(null);
+	System.out.println(data);	
+  }
+}
 }
