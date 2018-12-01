@@ -166,6 +166,15 @@ public static void get_most_reapeated(int[]arr)
         return true;
 	      
     }
+    public static void get_avg(int []arr){
+        int x=0;
+        for(int i=0;i<arr.length;i++)
+        {
+            x+=arr[i];
+        }
+        x/=arr.length;
+        System.out.println("the average is "+x);
+    }
 
     public static void main(String[] args) {
 	
