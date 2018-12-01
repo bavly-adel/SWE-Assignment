@@ -339,6 +339,13 @@ public static void Reverse_arr(String arr[]){
                     System.out.println();
                     getSmallest(arr);
                     checkSort(arr);
+			 String a[]=new String [arr.length];
+        for(int i=0;i<arr.length ;i++)
+        { 
+            a[i]=Integer.toString(arr[i]);
+		
+          } 
+			Reverse_arr( arr);
 
 
                 }
@@ -371,7 +378,7 @@ public static void Reverse_arr(String arr[]){
 
                 }
                 else if (choice == 4) {
-
+                       Reverse_arr( arr);
                 }
                 else {
                     System.out.println("Invalid Choice");
