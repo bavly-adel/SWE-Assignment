@@ -1,3 +1,4 @@
+
 package com.company;
 
 import java.util.Scanner;
@@ -69,6 +70,37 @@ public class Main {
         }
         System.out.println("the most repeated value is : "+most);
     }
+
+
+
+	/* Check palindrome */
+	public static boolean isPalindrome(String arr,int choice)
+	{
+		String t="";
+		int n=arr.length();
+		if(choice==1)
+		{
+			for(int i=0;i<n;i++)
+			{
+				if(arr.charAt(i)!=' ')
+				{
+					t+=arr.charAt(i);
+				}
+			}
+		}
+		else
+		{
+			t=arr;
+		}
+		int p2=t.length()-1,sz=p2+1;
+		for(int p=0;p<sz/2;p++)
+		{
+			if(arr.charAt(p)!=arr.charAt(p2))return false;
+			p2--;
+		}
+		return true;
+	}
+
 
 
     /** Min-3 Method **/
@@ -183,6 +215,7 @@ public class Main {
     }
 
 
+
 	
     }
 public static void Reverse_arr(String arr[]){
@@ -221,6 +254,7 @@ public static void Reverse_arr(String arr[]){
 	      get_most_reapeated(values);
 	    getSmallest(values);
 	    
+
 
 
 
@@ -273,11 +307,32 @@ public static void Reverse_arr(String arr[]){
                 }
                 else if (choice == 4) {
 
+                	int n=arr.length;
+                	Print_largest(arr, n);
+
                 }
                 else if (choice == 5) {
                     getSmallest(arr);
                 }
                 else if (choice == 6) {
+
+                	String t="";
+                	int n=arr.length;
+                	for(int i=0;i<n;i++)
+                	{
+                		t+=Integer.toString(arr[i]);
+                	}
+                	if(isPalindrome(t,0))
+                	{
+                		System.out.println("Palindrome");
+                	}
+                	else
+                	{
+                		System.out.println("NotPalindrome");
+                	}
+                	
+                	
+
 
                 }
                 else if (choice == 7) {
@@ -294,6 +349,7 @@ public static void Reverse_arr(String arr[]){
 
                 }
                 else if (choice == 9) {
+
          String a[]=new String [arr.length];
         for(int i=0;i<arr.length ;i++)
         { 
@@ -302,6 +358,7 @@ public static void Reverse_arr(String arr[]){
           } 
 			Reverse_arr( arr);
     } 
+
 
                 }
                 else if (choice == 10) {
@@ -321,8 +378,18 @@ public static void Reverse_arr(String arr[]){
                 }
                 else if (choice == 14) {
 
+
                 }
                 else if (choice == 15) {
+
+
+
+                	get_avg(arr);
+                	
+                }
+                else if (choice == 15) {
+                	int x=getMedian(arr);
+                	System.out.println("The median is"+x);
 
                 }
                 else if (choice == 16) {
@@ -330,7 +397,11 @@ public static void Reverse_arr(String arr[]){
                 }
                 else if (choice == 17) {
 
+
                 }
+
+		                }
+
                 else if (choice == 18) {
                     get_most_reapeated(arr);
                     int [] Res=Get_Min3(arr);
@@ -339,6 +410,7 @@ public static void Reverse_arr(String arr[]){
                     System.out.println();
                     getSmallest(arr);
                     checkSort(arr);
+
 			 String a[]=new String [arr.length];
         for(int i=0;i<arr.length ;i++)
         { 
@@ -346,6 +418,7 @@ public static void Reverse_arr(String arr[]){
 		
           } 
 			Reverse_arr( arr);
+
 
 
                 }
@@ -369,16 +442,32 @@ public static void Reverse_arr(String arr[]){
 
                 }
                 else if (choice == 2) {
+
 		 Reverse_arr( arr);
        
      
+
+                	String t=word;
+                	if(isPalindrome(t,0))
+                	{
+                		System.out.println("Palindrome");
+                	}
+                	else
+                	{
+                		System.out.println("NotPalindrome");
+                	}
+
 
                 }
                 else if (choice == 3) {
 
                 }
                 else if (choice == 4) {
+
                        Reverse_arr( arr);
+
+
+
                 }
                 else {
                     System.out.println("Invalid Choice");
@@ -390,6 +479,7 @@ public static void Reverse_arr(String arr[]){
             }
 
         }
+
 
 
 
@@ -412,8 +502,13 @@ public void sort(int array[],int size)
 }
 
 
+
     }
 
 
 
+
 }
+
+}
+
