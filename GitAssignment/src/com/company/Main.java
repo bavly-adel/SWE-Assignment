@@ -1,3 +1,5 @@
+
+
 package com.company;
 
 import java.util.Scanner;
@@ -69,6 +71,34 @@ public class Main {
         }
         System.out.println("the most repeated value is : "+most);
     }
+
+	/* Check palindrome */
+	public static boolean isPalindrome(String arr,int choice)
+	{
+		String t="";
+		int n=arr.length();
+		if(choice==1)
+		{
+			for(int i=0;i<n;i++)
+			{
+				if(arr.charAt(i)!=' ')
+				{
+					t+=arr.charAt(i);
+				}
+			}
+		}
+		else
+		{
+			t=arr;
+		}
+		int p2=t.length()-1,sz=p2+1;
+		for(int p=0;p<sz/2;p++)
+		{
+			if(arr.charAt(p)!=arr.charAt(p2))return false;
+			p2--;
+		}
+		return true;
+	}
 
 
     /** Min-3 Method **/
@@ -183,38 +213,6 @@ public class Main {
     }
 
 
-	
-    }
-    public static void Distinct(int []arr) {
-		String temp="";
-		String collect="";
-        boolean flag=false;
-        int x;
-        for (int i = 0; i < arr.length; i++) {
-        	collect+=arr[i];
-        	collect+=" ";}
-      ArrayList<String> values= new ArrayList<String>(Arrays.asList(collect.split(" ")));
-      ArrayList<String> add=new ArrayList<>();
-     for(int i=0;i<values.size();i++){
-    	 
-    	  x=add.indexOf(values.get(i));
-    	 if(x==-1)
-    		 add.add(values.get(i));
-        	
-        		
-        }
-     for(int i=0;i<add.size();i++)
-        System.out.print(add.get(i)+" ");
-
-           
-
-
-	      int[] values={3,4,3,7,2,1,1,1,4};
-	      get_most_reapeated(values);
-	    getSmallest(values);
-	    
-
-
 
     public static void main(String[] args)
     {
@@ -264,12 +262,31 @@ public class Main {
 
                 }
                 else if (choice == 4) {
+                	int n=arr.length;
+                	Print_largest(arr, n);
+                	
 
                 }
                 else if (choice == 5) {
                     getSmallest(arr);
                 }
                 else if (choice == 6) {
+                	String t="";
+                	int n=arr.length;
+                	for(int i=0;i<n;i++)
+                	{
+                		t+=Integer.toString(arr[i]);
+                	}
+                	if(isPalindrome(t,0))
+                	{
+                		System.out.println("Palindrome");
+                	}
+                	else
+                	{
+                		System.out.println("NotPalindrome");
+                	}
+                	
+                	
 
                 }
                 else if (choice == 7) {
@@ -305,16 +322,19 @@ public class Main {
                 }
                 else if (choice == 14) {
 
+
+                	get_avg(arr);
+                	
                 }
                 else if (choice == 15) {
-
+                	int x=getMedian(arr);
+                	System.out.println("The median is"+x);
                 }
                 else if (choice == 16) {
 
                 }
                 else if (choice == 17) {
-
-                }
+		                }
                 else if (choice == 18) {
                     get_most_reapeated(arr);
                     int [] Res=Get_Min3(arr);
@@ -346,6 +366,15 @@ public class Main {
 
                 }
                 else if (choice == 2) {
+                	String t=word;
+                	if(isPalindrome(t,0))
+                	{
+                		System.out.println("Palindrome");
+                	}
+                	else
+                	{
+                		System.out.println("NotPalindrome");
+                	}
 
                 }
                 else if (choice == 3) {
@@ -366,29 +395,9 @@ public class Main {
         }
 
 
-
-    }
- sortt
- sortt
-public void sort(int array[],int size)
-		{ArrayList<Integer> data = new ArrayList<Integer>();          
-		for(int i=0;i<size;i++)
-		{data.add(array[i]);}
-
-			data.sort(null);
-			System.out.println(data);
-		}
-}
-
-	
-
-
-}
-
-
     }
 
 
 
+
 }
- master
