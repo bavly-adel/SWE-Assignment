@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class Main {
 
 
-
-    public void sort(int array[],int size) {
+    /** Sort Array Method **/
+    public static void sort(int array[],int size) {
         ArrayList<Integer> data = new ArrayList<Integer>();
         for (int i = 0; i < size; i++)
             data.add(array[i]);
@@ -15,9 +15,8 @@ public class Main {
         System.out.println(data);
     }
 
-    /** Print-Largest Method**/
-    public static void Print_largest(int arr[], int arr_size)
-    {
+    /** Print-Largest Method **/
+    public static void Print_largest(int arr[], int arr_size) {
         int first, second, third;
 
 
@@ -50,9 +49,8 @@ public class Main {
         System.out.println("Three largest elements are=> " + first + " " + second + " " + third);
     }
 
-    /* Most Repeated Method*/
-    public static void get_most_reapeated(int[]arr)
-    {
+    /** Most Repeated Method **/
+    public static void get_most_reapeated(int[]arr) {
         int most = 0;
         int temp=0;
         int count=0,tempcount;
@@ -78,9 +76,8 @@ public class Main {
         System.out.println("the most repeated value is : "+most);
     }
 
-    /* Check palindrome */
-    public static boolean isPalindrome(String arr,int choice)
-    {
+    /** Check palindrome **/
+    public static boolean isPalindrome(String arr,int choice) {
         String t="";
         int n=arr.length();
         if(choice==1)
@@ -127,6 +124,7 @@ public class Main {
         return min_3element;
     }
 
+    /** Check sorted Method**/
     public static boolean checkSort(int[] array){
 
         for(int i=0;i<array.length-1;i++){
@@ -140,7 +138,7 @@ public class Main {
 
     }
 
-
+    /** Get Average Method **/
     public static void get_avg(int []arr){
         int x=0;
         for(int i=0;i<arr.length;i++)
@@ -151,8 +149,8 @@ public class Main {
         System.out.println("the average is "+x);
     }
 
-    public static void getSmallest(int []arr)
-    {
+    /** Get Smallest Prime Method **/
+    public static void getSmallest(int []arr) {
 
         int sz=arr.length;
         int [] arr1;
@@ -188,10 +186,10 @@ public class Main {
             }
 
         }
-        System.out.print("the smallest prime is : "+ t );
+        System.out.print("the smallest prime is : " + t );
     }
 
-
+    /** Get Median Method **/
     public static double getMedian(int[] input){
 
         // Median of array of N values
@@ -217,7 +215,7 @@ public class Main {
         return even ? ((temp[medianPosition] + temp[medianPosition + 1]) / 2.0) : temp [medianPosition];
     }
 
-
+    /** Reverse Array Method **/
     public static void Reverse_arr(String arr[]){
         String a[]=new String [arr.length];
         for(int i=0;i<arr.length ;i++)
@@ -227,7 +225,7 @@ public class Main {
         }
     }
 
-
+    /** Distinct Method **/
     public static void Distinct(int []arr) {
         String temp = "";
         String collect = "";
@@ -254,6 +252,9 @@ public class Main {
 
 
 
+    /******************/
+    /** MAIN METHOD **/
+    /*****************/
     public static void main(String[] args)
     {
 
@@ -300,17 +301,18 @@ public class Main {
                     get_most_reapeated(arr);
                 }
                 else if (choice == 2) {
-
+                    sort(arr, arr.length);
                 }
                 else if (choice == 3) {
-
+                    // Shuffle method goes here
                 }
                 else if (choice == 4) {
-                    int n=arr.length;
-                    Print_largest(arr, n);
-
+                    //int n=arr.length;
+                    //Print_largest(arr, n); // THIS IS GET MAX 3
+                    // Get largest PRIME not implemented yet
                 }
                 else if (choice == 5) {
+                    // Get smallest PRIME
                     getSmallest(arr);
                 }
                 else if (choice == 6)
@@ -343,7 +345,7 @@ public class Main {
                     }
                 }
                 else if (choice == 8) {
-
+                    // Count Primes function goes here
                 }
                 else if (choice == 9) {
 
@@ -353,19 +355,18 @@ public class Main {
                         a[i]=Integer.toString(arr[i]);
 
                     }
-                    Reverse_arr( a);
+                    Reverse_arr(a);
                 }
-
-
 
                 else if (choice == 10) {
-
+                    // Shift array function goes here
                 }
                 else if (choice == 11) {
-
+                    Distinct(arr);
                 }
                 else if (choice == 12) {
-
+                    // Get largest 3
+                    Print_largest(arr, arr.length);
                 }
                 else if (choice == 13) {
                     int [] Res=Get_Min3(arr);
@@ -374,8 +375,7 @@ public class Main {
                     System.out.println();
                 }
                 else if (choice == 14) {
-
-
+                    get_avg(arr);
                 }
 
 
@@ -385,9 +385,10 @@ public class Main {
 
                 }
                 else if (choice == 16) {
-
+                    // Return only primes function goes here
                 }
                 else if (choice == 17) {
+                    // Zero if less than zero function goes here
                 }
 
                 else if (choice == 18) {
