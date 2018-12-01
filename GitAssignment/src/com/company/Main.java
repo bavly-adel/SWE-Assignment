@@ -183,6 +183,50 @@ public class Main {
         // RETURN THE MEDIAN
         return even ? (temp[medianPosition] + temp[medianPosition + 1] / 2) : temp [medianPosition];
     }
+////////////////////////////////////////////////////////////////////
+public class CheckPalindrome<E> {
+	private Object [] Container;
+	private int sz;
+	CheckPalindrome()
+	{
+		System.out.println("*Please Make an array with your data,"+'\n'+"*Then pass its size to setsize method,"+'\n'+"*Pass the array it self to setContainer method "+'\n'+"*And finally call isPalindrome method");
+		System.out.println();
+	}
+	CheckPalindrome(int n)
+	{
+		sz=n;
+		Container=new Object[sz];
+	}
+	E get(int indx)
+	{
+		final E eobj=(E) Container[indx];
+		return eobj;
+	}
+	void add(int indx,E val)
+	{
+		Container[indx]=val;
+	}
+	void setsize(int n)
+	{
+		sz=n;
+	}
+	void setContainer(E []arr)
+	{
+		Container=arr;
+	}
+	boolean isPalindrome()
+	{
+		
+		int p2=sz-1;
+		for(int p=0;p<sz/2;p++)
+		{
+			if(!get(p).equals(get(p2)))return false;
+			p2--;
+		}
+		return true;
+	}
+}
+/////////////////////////////////////////////////////////////////////
 	
 	
 	
