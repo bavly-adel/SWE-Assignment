@@ -57,7 +57,7 @@ public static void get_most_reapeated(int[]arr)
     }
 
 
-    public static boolean checkSort(double[] array){
+    public static boolean checkSort(int[] array){
 
         for(int i=0;i<array.length-1;i++){
             if(array[i]<array[i+1]){
