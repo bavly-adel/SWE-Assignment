@@ -48,9 +48,26 @@ public static void get_most_reapeated(int[]arr)
         int []min_3element= {Copy_Array[0],Copy_Array[1],Copy_Array[2]};
         return min_3element;
     }
+	
+	public static boolean checkSort(int[] array){
+
+        for(int i=0;i<array.length-1;i++){
+            if(array[i]<array[i+1]){
+                continue;
+            }else {
+                return false;
+            }
+        }
+        return true;
+	      
+    }
 
     public static void main(String[] args) {
-	      int[] values={3,4,3,7,2,1,1,1,4};
-	      get_most_reapeated(values);
+	
+
+
     }
+
+
+    
 }
