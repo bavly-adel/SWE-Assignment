@@ -1,7 +1,9 @@
 package com.company;
 
 public class Main {
-         public static void Print_largest(int arr[], int arr_size) 
+
+  /** Print-Largest Method**/
+     public static void Print_largest(int arr[], int arr_size) 
     { 
         int first, second, third; 
     
@@ -35,22 +37,29 @@ public class Main {
         System.out.println("Three largest elements are=> " + first + " " + second + " " + third); 
     } 
 
-
+    /** Min-3 Method **/
+    public static int[] Get_Min3(int []arr){
+        int len=arr.length;
+        int []Copy_Array=new int[len];
+        for(int i=0;i<len;i++) {
+            Copy_Array[i]=arr[i];
+        }
+        len=len-1;
+        for(int i=0;i<len;i++) {
+            for(int j=0;j<len-i;j++) {
+                if (Copy_Array[j]>Copy_Array[j+1])
+                {
+                    int tmp=Copy_Array[j];
+                    Copy_Array[j]=Copy_Array[j+1];
+                    Copy_Array[j+1]=tmp;
+                }
+            }}
+        int []min_3element= {Copy_Array[0],Copy_Array[1],Copy_Array[2]};
+        return min_3element;
+    }
+  
+  /** Main Method**/
     public static void main(String[] args) {
 	
-       int[]arr;
-        int sizee ;
-        Scanner input=new Scanner(System.in) ;
-        System.out.println("Enter number of elemets that you want to get the largest three of them :");
-        sizee=input.nextInt() ;
-        arr=new int[sizee] ;
-         Scanner in=new Scanner(System.in) ;
-         System.out.println("Enter your data :");
-
-        for(int i=0 ;i<sizee;i++) {
-         arr[i]=in.nextInt() ;
-        }
-        Print_largest(arr,sizee) ;
-
     }
 }
