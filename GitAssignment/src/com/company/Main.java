@@ -226,28 +226,25 @@ public class Main {
 		data.sort(null);
 		System.out.println(data);
 	}
-                   public  static int[] shufflearray(int array[]){
-       Random rnd = new Random(); 
-       for(int i=0;i<array.length;i++){
-           int randomposition=rnd.nextInt(array.length);
+                  public  static int[] shufflearray(int array[]){  
+                 int arr[]=new int[array.length];
+       for (int j=0;j<array.length;j++){arr[j]=array[j];}
+            Random rnd = new Random();
+       for( int i=0;i<arr.length;i++){
+           int randomposition=rnd.nextInt(arr.length);
            //to swap the element 
-           int temp=array[i];
-           array[i]=array[randomposition];
-           array[randomposition]=temp;
-       }
-     //  System.out.print("the element before shuffle --->");
-       // for (int j = 0; j < array.length; j++)
-    //{
-      //System.out.print(array[j] + " ");
-    //}
-      //  System.out.println(); 
-        for (int k = 0; k < array.length; k++)
+           int temp=arr[i];
+           arr[i]=arr[randomposition];
+           arr[randomposition]=temp;
+       } 
+     
+        for (int k = 0; k < arr.length; k++)
     {
-      System.out.print(array[k] + " ");
+      System.out.print(arr[k] + " ");
     }
     System.out.println();
 			   
-       return array;
+       return arr;
 }
 	public static void main(String[] args)
     {
