@@ -31,25 +31,24 @@ public class Main {
            array[i]=array[randomposition];
            array[randomposition]=temp;
        }
+     //  System.out.print("the element before shuffle --->");
+       // for (int j = 0; j < array.length; j++)
+    //{
+      //System.out.print(array[j] + " ");
+    //}
+      //  System.out.println(); 
+        for (int k = 0; k < array.length; k++)
+    {
+      System.out.print(array[k] + " ");
+    }
+    System.out.println();
        return array;
    
    }
 
     public static void main(String[] args) {
 	// write your code here
-        int []arrayofelement={7,9,3,5,6};
-        System.out.print("the element before shuffle --->");
-        for (int i = 0; i < arrayofelement.length; i++)
-    {
-      System.out.print(arrayofelement[i] + " ");
-    }
-       System.out.println(); 
+       int []arrayofelement={7,9,3,5,6};
         shufflearray(arrayofelement);
-        for (int i = 0; i < arrayofelement.length; i++)
-    {
-      System.out.print(arrayofelement[i] + " ");
-    }
-    System.out.println();
-  }
     }
 }
