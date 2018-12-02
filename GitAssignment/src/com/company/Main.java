@@ -1,4 +1,4 @@
-
+package com.company;
 import java.util.*;
 import java.util.Random;
 public class Main {
@@ -157,7 +157,7 @@ public class Main {
 		System.out.print("the smallest prime is : " + t);
 	}
 
-	public static int getMedian(int[] input) {
+	public static double getMedian(int[] input) {
 
 		// Median of array of N values
         // If N is odd  => The median will be at (N + 1) / 2 (middle value)
@@ -381,7 +381,8 @@ public class Main {
                 }
 
                 else if (choice == 18) {
-                    getMedian(arr);
+                    double x = getMedian(arr);
+			System.out.println("The median is: " + x);
                     get_most_reapeated(arr);
 
 			              shufflearray(arr);
