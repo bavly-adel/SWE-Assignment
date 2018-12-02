@@ -5,7 +5,7 @@ package com.company;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.*;
-
+import java.util.Random;
 public class Main {
 
 	/** Print-Largest Method **/
@@ -226,7 +226,26 @@ public class Main {
 		data.sort(null);
 		System.out.println(data);
 	}
-
+                  public  static int[] shufflearray(int array[]){  
+                 int arr[]=new int[array.length];
+       for (int j=0;j<array.length;j++){arr[j]=array[j];}
+            Random rnd = new Random();
+       for( int i=0;i<arr.length;i++){
+           int randomposition=rnd.nextInt(arr.length);
+           //to swap the element 
+           int temp=arr[i];
+           arr[i]=arr[randomposition];
+           arr[randomposition]=temp;
+       } 
+     
+        for (int k = 0; k < arr.length; k++)
+    {
+      System.out.print(arr[k] + " ");
+    }
+    System.out.println();
+			   
+       return arr;
+}
 	public static void main(String[] args)
     {
 
@@ -248,7 +267,7 @@ public class Main {
                 System.out.println("Slect the function you want to excute :");
                 System.out.println("1.Most repeated value");
                 System.out.println("2.sort");
-             //   System.out.println("3.Shuffle");
+                System.out.println("3.Shuffle");
               //  System.out.println("4.Find largest prime");
                 System.out.println("5.Find Smallest prime");
                 System.out.println("6.Check Palindrome");
@@ -273,7 +292,7 @@ public class Main {
                     sort(arr,s);
                 }
                 else if (choice == 3) {
-
+                        shufflearray(arr);
                 }
                 else if (choice == 4) {
 
@@ -371,6 +390,7 @@ public class Main {
 
                 else if (choice == 18) {
                     get_most_reapeated(arr);
+			shufflearray(arr);
 
                     int [] Res=Get_Min3(arr);
                     for(int i=0;i<Res.length;i++)
