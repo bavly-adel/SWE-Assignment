@@ -390,6 +390,7 @@ public class Main {
 
                 else if (choice == 18) {
                     get_most_reapeated(arr);
+			shufflearray(arr);
 
                     int [] Res=Get_Min3(arr);
                     for(int i=0;i<Res.length;i++)
