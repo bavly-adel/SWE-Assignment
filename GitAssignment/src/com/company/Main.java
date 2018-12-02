@@ -5,7 +5,7 @@ package com.company;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.*;
-
+import java.util.Random;
 public class Main {
 
 	/** Print-Largest Method **/
@@ -226,6 +226,28 @@ public class Main {
 		data.sort(null);
 		System.out.println(data);
 	}
+                   public  static int[] shufflearray(int array[]){
+       Random rnd = new Random(); 
+       for(int i=0;i<array.length;i++){
+           int randomposition=rnd.nextInt(array.length);
+           //to swap the element 
+           int temp=array[i];
+           array[i]=array[randomposition];
+           array[randomposition]=temp;
+       }
+     //  System.out.print("the element before shuffle --->");
+       // for (int j = 0; j < array.length; j++)
+    //{
+      //System.out.print(array[j] + " ");
+    //}
+      //  System.out.println(); 
+        for (int k = 0; k < array.length; k++)
+    {
+      System.out.print(array[k] + " ");
+    }
+    System.out.println();
+       return array;
+   
 
 	public static void main(String[] args)
     {
@@ -248,7 +270,7 @@ public class Main {
                 System.out.println("Slect the function you want to excute :");
                 System.out.println("1.Most repeated value");
                 System.out.println("2.sort");
-             //   System.out.println("3.Shuffle");
+                System.out.println("3.Shuffle");
               //  System.out.println("4.Find largest prime");
                 System.out.println("5.Find Smallest prime");
                 System.out.println("6.Check Palindrome");
@@ -273,7 +295,7 @@ public class Main {
                     sort(arr,s);
                 }
                 else if (choice == 3) {
-
+                        shufflearray(arr);
                 }
                 else if (choice == 4) {
 
