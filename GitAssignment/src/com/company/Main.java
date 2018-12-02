@@ -246,9 +246,9 @@ public class Main {
       System.out.print(array[k] + " ");
     }
     System.out.println();
+			   
        return array;
-   
-
+}
 	public static void main(String[] args)
     {
 
