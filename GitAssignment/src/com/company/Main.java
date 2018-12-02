@@ -1,9 +1,4 @@
-
 package com.company;
-
-
-import java.util.Scanner;
-import java.util.Arrays;
 import java.util.*;
 import java.util.Random;
 public class Main {
@@ -162,28 +157,29 @@ public class Main {
 		System.out.print("the smallest prime is : " + t);
 	}
 
-	public static int getMedian(int[] input) {
+	public static double getMedian(int[] input) {
 
 		// Median of array of N values
-		// If N is odd => The median will be at (N + 1) / 2 (middle value)
-		// If N is even => The median will be the average of (N/2 , N/2 + 1)
+        // If N is odd  => The median will be at (N + 1) / 2 (middle value)
+        // If N is even => The median will be the average of (N/2 , N/2 + 1)
 
-		int[] temp = Arrays.copyOf(input, input.length);
-		int len = temp.length;
-		boolean even = (len % 2) == 0;
-		int medianPosition = even ? (int) (len / 2.0) : ((len + 1) / 2) - 1;
+        int [] temp = Arrays.copyOf(input, input.length);
+        int len = temp.length;
+        boolean even = (len % 2) == 0;
+        int medianPosition = even ? (int) (len / 2.0) - 1 :  ((len + 1) / 2) - 1;
 
-		// SORT THE INPUT ARRAY BEFORE SELECTING THE MEDIAN
-		for (int i = 0; i < len - 1; i++)
-			for (int j = i + 1; j < len; j++)
-				if (temp[i] > temp[j]) {
-					int x = temp[j];
-					temp[j] = temp[i];
-					temp[i] = x;
-				}
+        // SORT THE INPUT ARRAY BEFORE SELECTING THE MEDIAN
+        for (int i = 0 ; i < len-1 ; i++)
+            for (int j = i + 1; j < len  ; j++)
+                if (temp[i] > temp[j]){
+                    int x = temp[j];
+                    temp[j] = temp[i];
+                    temp[i] = x;
+                }
 
-		// RETURN THE MEDIAN
-		return even ? (temp[medianPosition] + temp[medianPosition + 1] / 2) : temp[medianPosition];
+
+        // RETURN THE MEDIAN
+        return even ? ((temp[medianPosition] + temp[medianPosition + 1]) / 2.0) : temp [medianPosition];
 	}
 
 	public static void Reverse_arr(String arr[]) {
@@ -247,6 +243,7 @@ public class Main {
        return arr;
 }
 	public static void main(String[] args)
+
     {
 
 
@@ -255,7 +252,8 @@ public class Main {
             System.out.println("Git Assignment team 9");
             System.out.println("Select the type of data you want to enter : 1 for numbers or 2 for chars ");
             int choicee = input.nextInt();
-            if (choicee == 1) {
+            if (choicee == 1)
+            {
                 System.out.println("Please Enter The array size");
                 int size = input.nextInt();
                 System.out.println("Please enter the element of tha array");
@@ -280,47 +278,49 @@ public class Main {
                 System.out.println("13.Get minimum 3 numbers");
                 System.out.println("14.Get average");
                 System.out.println("15.Get median");
-              //  System.out.println("16.Return only primes");
-             //   System.out.println("17.Zero if less than zero");
-                System.out.println("18.Excute All");
+                //System.out.println("16.Return only primes");
+                //System.out.println("17.Zero if less than zero");
+                System.out.println("18.Execute All");
                 int choice =input.nextInt();
+
+
+
                 if (choice == 1) {
                     get_most_reapeated(arr);
                 }
                 else if (choice == 2) {
-                    int s=arr.length;
-                    sort(arr,s);
+                    sort(arr, arr.length);
                 }
                 else if (choice == 3) {
                         shufflearray(arr);
+
                 }
                 else if (choice == 4) {
-
-
-
+                    //int n=arr.length;
+                    //Print_largest(arr, n); // THIS IS GET MAX 3
+                    // Get largest PRIME not implemented yet
                 }
                 else if (choice == 5) {
+                    // Get smallest PRIME
                     getSmallest(arr);
                 }
-                else if (choice == 6) {
+                else if (choice == 6)
+                {
 
-                	String t="";
-                	int n=arr.length;
-                	for(int i=0;i<n;i++)
-                	{
-                		t+=Integer.toString(arr[i]);
-                	}
-                	if(isPalindrome(t,0))
-                	{
-                		System.out.println("Palindrome");
-                	}
-                	else
-                	{
-                		System.out.println("NotPalindrome");
-                	}
-
-
-
+                    String t="";
+                    int n=arr.length;
+                    for(int i=0;i<n;i++)
+                    {
+                        t+=Integer.toString(arr[i]);
+                    }
+                    if(isPalindrome(t,0))
+                    {
+                        System.out.println("Palindrome");
+                    }
+                    else
+                    {
+                        System.out.println("NotPalindrome");
+                    }
 
                 }
                 else if (choice == 7) {
@@ -334,30 +334,28 @@ public class Main {
                     }
                 }
                 else if (choice == 8) {
-
+                    // Count Primes function goes here
                 }
                 else if (choice == 9) {
 
-         String a[]=new String [arr.length];
-        for(int i=0;i<arr.length ;i++)
-           {
-            a[i]=Integer.toString(arr[i]);
+                    String a[]=new String [arr.length];
+                    for(int i=0;i<arr.length ;i++)
+                    {
+                        a[i]=Integer.toString(arr[i]);
 
-           }
-			Reverse_arr(a);
-             }
-
-
+                    }
+                    Reverse_arr(a);
+                }
 
                 else if (choice == 10) {
-
+                    // Shift array function goes here
                 }
                 else if (choice == 11) {
-                Distinct(arr);
+                    Distinct(arr);
                 }
                 else if (choice == 12) {
-
-                      Print_largest(arr, arr.length);
+                    // Get largest 3
+                    Print_largest(arr, arr.length);
                 }
                 else if (choice == 13) {
                     int [] Res=Get_Min3(arr);
@@ -366,135 +364,109 @@ public class Main {
                     System.out.println();
                 }
                 else if (choice == 14) {
-
-                     get_avg(arr);
+                    get_avg(arr);
                 }
+
+
                 else if (choice == 15) {
-
-
-
-                	int res=getMedian(arr);
-                	System.out.println("Median is "+res);
+                    double x = getMedian(arr);
+                    System.out.println("The median is: " + x);
 
                 }
-
                 else if (choice == 16) {
-
+                    // Return only primes function goes here
                 }
                 else if (choice == 17) {
-
-
+                    // Zero if less than zero function goes here
                 }
 
-
-
                 else if (choice == 18) {
+                    double x = getMedian(arr);
+			System.out.println("The median is: " + x);
                     get_most_reapeated(arr);
-			shufflearray(arr);
+
+			              shufflearray(arr);
 
                     int [] Res=Get_Min3(arr);
                     for(int i=0;i<Res.length;i++)
-                        System.out.print("Min 3 are : "+Res[i]+", ");
+                        System.out.print(Res[i]+", ");
                     System.out.println();
                     getSmallest(arr);
+                    checkSort(arr);
 
-                    boolean ress= checkSort(arr);
-                    if(ress)
+                    String a[]=new String [arr.length];
+                    for(int i=0;i<arr.length ;i++)
                     {
-                        System.out.println("Sorted");
+                        a[i]=Integer.toString(arr[i]);
+
                     }
-                    else {
-                        System.out.println("Not Sorted");
-                    }
-                    Print_largest(arr, arr.length);
+                    Reverse_arr(a);
 
-			 String a[]=new String [arr.length];
-        for(int i=0;i<arr.length ;i++)
-        {
-            a[i]=Integer.toString(arr[i]);
 
-          }
-			Reverse_arr(a);
-			get_avg(arr);
-
-			int res=getMedian(arr);
-        	System.out.println("Median is "+res);
-        	sort(arr,arr.length);
-
-        	String t="";
-        	int n=arr.length;
-        	for(int i=0;i<n;i++)
-        	{
-        		t+=Integer.toString(arr[i]);
-        	}
-        	if(isPalindrome(t,0))
-        	{
-        		System.out.println("Palindrome");
-        	}
-        	else
-        	{
-        		System.out.println("NotPalindrome");
-        	}
-        	Distinct(arr);
 
                 }
                 else {
                     System.out.println("Invalid Choice");
                 }
 
-            }else if(choicee==2)
-
-	{
-		System.out.println("Please Enter Your String:");
-		String word = input.next();
-		String[] arr = word.split("");
-		System.out.println();
-		System.out.println("Slect the function you want to excute :");
-		System.out.println("1.Check Palindrome");
-		System.out.println("2.Reverse array");
-	//	System.out.println("3.shift array");
-		System.out.println("4.Excute All");
-		int choice = input.nextInt();
-		if (choice == 1) {
-
-		} else if (choice == 2) {
-
-			Reverse_arr(arr);
-
-			String t = word;
-			if (isPalindrome(t, 0)) {
-				System.out.println("Palindrome");
-			} else {
-				System.out.println("NotPalindrome");
-			}
-
-		} else if (choice == 3) {
-
-		} else if (choice == 4) {
-
-			Reverse_arr(arr);
-			System.out.println();
-			Reverse_arr(arr);
-
-			String t = word;
-			if (isPalindrome(t, 0)) {
-				System.out.println("Palindrome");
-			} else {
-				System.out.println("NotPalindrome");
-			}
-
-		} else {
-			System.out.println("Invalid Choice");
-		}
+            }
+            else if (choicee == 2) {
+                System.out.println("Please Enter Your String: ");
+                String word = input.next();
+                String[] arr = word.split("");
+                System.out.println();
+                System.out.println("Select the function you want to execute: ");
+                System.out.println("1. Check Palindrome");
+                System.out.println("2. Reverse array");
+                System.out.println("3. Shift array");
+                System.out.println("4. Execute All");
+                int choice=input.nextInt();
 
 
-	}else
-	{
-		System.out.println("Invalide choice");
-	}
+                if (choice == 1) {
 
-}
+                }
+                else if (choice == 2)
+                {
 
-}
+                    Reverse_arr( arr);
+                    String t=word;
+                    if(isPalindrome(t,0))
+                    {
+                        System.out.println("Palindrome");
+                    }
+                    else
+                    {
+                        System.out.println("NotPalindrome");
+                    }
+
+
+                }
+                else if (choice == 3) {
+
+                }
+                else if (choice == 4) {
+
+                    Reverse_arr( arr);
+
+
+
+                }
+                else {
+                    System.out.println("Invalid Choice");
+                }
+
+            }
+            else {
+                System.out.println("Invalide choice");
+            }
+
+        }
+
+
+
+
+    }
+
 
 }
